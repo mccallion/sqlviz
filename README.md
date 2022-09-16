@@ -13,7 +13,7 @@ from sqlviz.parser import *
 
 ``` python
 conn = Conn(CREDS)
-query = "select email, url from pageviews limit 5"
+query = "select count(*) as records from pageviews"
 sql = Sql(conn, query)
 sql.run()
 ```
@@ -36,35 +36,13 @@ sql.run()
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>email</th>
-      <th>url</th>
+      <th>records</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>sk.bhachech@everbridge.com</td>
-      <td>https://everbridge.zengrc.com/reports/audits/a...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>sk.bhachech@everbridge.com</td>
-      <td>https://everbridge.zengrc.com/sor/listing/Revi...</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>maria_sonina@colpal.com</td>
-      <td>https://colgate.zengrc.com/sor/info/Project/22...</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>chuck.walkup@virginpulse.com</td>
-      <td>https://virginpulse.zengrc.com/todo_list/To-Do...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>chuck.walkup@virginpulse.com</td>
-      <td>https://virginpulse.zengrc.com/sor/listing/Iss...</td>
+      <td>860385</td>
     </tr>
   </tbody>
 </table>
