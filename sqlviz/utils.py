@@ -3,7 +3,7 @@
 # %% auto 0
 __all__ = ['CREDS', 'Q', 'css2name', 'color_vals', 'colors', 'color_map', 'rect', 'to_img']
 
-# %% ../00_utils.ipynb 2
+# %% ../00_utils.ipynb 3
 from fastcore.utils import *
 from fastcore.test import *
 from PIL import Image
@@ -11,14 +11,14 @@ from matplotlib import cm
 from matplotlib.colors import LinearSegmentedColormap
 import numpy as np
 
-# %% ../00_utils.ipynb 4
+# %% ../00_utils.ipynb 5
 CREDS = {
     "host" : "localhost",
     "database" : "rorymccallion",
     "user" : "rorymccallion" 
 }
 
-# %% ../00_utils.ipynb 6
+# %% ../00_utils.ipynb 7
 Q = [
     """select 1""",
     
@@ -49,7 +49,7 @@ where iswon
   and amount > 0""",
 ]
 
-# %% ../00_utils.ipynb 9
+# %% ../00_utils.ipynb 10
 css2name = {
     'white'             : 'white',
     'whitesmoke'        : 'lightgrey',
@@ -74,16 +74,16 @@ css2name = {
     'beige'             : 'beige',
 }
 
-# %% ../00_utils.ipynb 12
+# %% ../00_utils.ipynb 13
 color_vals = [x/100 for x in range(0, len(css2name)*5, 5)]
 colors = {k:v for k,v in zip(list(css2name.values()), color_vals)}
 
-# %% ../00_utils.ipynb 13
+# %% ../00_utils.ipynb 14
 color_map = LinearSegmentedColormap.from_list(
     "Colors are mapped to floats between 0 and 1",
     list(css2name.keys()))
 
-# %% ../00_utils.ipynb 16
+# %% ../00_utils.ipynb 17
 def rect(hw, color):
     return np.ones(hw) * colors[color]
 
