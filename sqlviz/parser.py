@@ -5,6 +5,7 @@ __all__ = ['parse_operations']
 
 # %% ../02_parser.ipynb 3
 from collections import defaultdict
+from fastcore.test import *
 from sqlglot import parse_one
 from sqlglot.expressions import Expression
 from .utils import *
